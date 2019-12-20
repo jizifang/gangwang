@@ -11,11 +11,11 @@ import java.util.List;
 @Repository
 public interface UserMapper {
 
-    @Results({ //2
-            @Result(property = "id", column = "id"), //2
+    @Results({ 
+            @Result(property = "id", column = "id"),
             @Result(property = "username", column = "username"),
             @Result(property = "password", column = "password")
     })
-    @Select("SELECT * FROM user") //3
+    @Select("SELECT * FROM user")
     List<User> selectAll();
 }
